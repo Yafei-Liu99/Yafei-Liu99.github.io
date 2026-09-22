@@ -1061,7 +1061,23 @@ html > body { padding:24px; max-width:1000px; margin:0 auto; }
     <h3 id="background-selected-name"></h3>
     <div class="selected-values tabular-nums" id="background-selected-values"></div>
   </div>
-  <div class="text-small">Celsius background is assigned by birthplace region: Europe, Asia and Pacific Islands, Africa, and Oceania. It does not measure actual Celsius use; the remaining population cannot be classified as Fahrenheit users.</div>
+  <p>For immigrants born outside the United States, the SIPP field <code>TBORNPLACE</code> provides these broad categories. We apply the following classification:</p>
+  <div class="table-responsive">
+    <table class="table table-sm" aria-label="SIPP birthplace regions and Celsius-background classification">
+      <thead>
+        <tr><th scope="col">SIPP code</th><th scope="col">Birthplace region</th><th scope="col">Our classification</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>61</td><td>Europe</td><td>Celsius background</td></tr>
+        <tr><td>62</td><td>Asia and Pacific Islands</td><td>Celsius background</td></tr>
+        <tr><td>63</td><td>Americas and Caribbean</td><td>Mixed background; excluded from the Celsius numerator</td></tr>
+        <tr><td>64</td><td>Africa</td><td>Celsius background</td></tr>
+        <tr><td>65</td><td>Oceania</td><td>Celsius background</td></tr>
+        <tr><td>66</td><td>Other</td><td>Unclassified</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <p>These region names come from <a href="https://api.census.gov/data/2025/sipp/variables/TBORNPLACE.json" target="_blank" rel="noopener">SIPP’s official birthplace categories</a>. <strong>The “Celsius background” label is our research assumption, not a SIPP survey response.</strong></p>
   <h3>YouGov 2022: Reported Temperature-Unit Use</h3>
   <div class="text-small">U.S. adult citizens · National and regional survey results, separate from the birthplace proxy above</div>
   <div class="table-responsive regional-table">
